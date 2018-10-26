@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Collction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../static/_layui/css/layui.css">
+    <link rel="stylesheet" href="../static/css/login.css">
+    <script src="../static/_layui/layui.js"></script>
+</head>
+<body>
+<div id="container">
+    <div>
+    </div>
+    <div class="admin-login-background">
+        <!--<div class="admin-header">-->
+        <!--<img src="image/ex_logo.png" class="admin-logo">-->
+        <!--</div>-->
+        <h1 style="font-weight: bold;text-align: center;margin-bottom: 20px;color: white;font-family: 微软雅黑">
+            Collection Go</h1>
+        <form class="layui-form" action="">
+            <!--头像-->
+            <img src="../static/image/head_icon.png" class="layui-circle"
+                 style="width: 120px;height: 120px;margin: 20px 85px;border: 2px solid rgba(255,255,255,0.5);">
+            <div>
+                <i class="layui-icon layui-icon-username admin-icon admin-icon-username" style="font-size: 25px"></i>
+                <input type="text" name="username" placeholder="请输入用户名"
+                       autocomplete="off"
+                       class="layui-input admin-input admin-input-username">
+            </div>
+            <div>
+                <i class="layui-icon layui-icon-password admin-icon admin-icon-password" style="font-size: 25px"></i>
+                <input type="password" name="password"
+                       placeholder="请输入密码"
+                       autocomplete="off"
+                       class="layui-input admin-input">
+            </div>
+            <!--<div>-->
+            <!--<input type="text" name="verify"-->
+            <!--placeholder="请输入验证码"-->
+            <!--autocomplete="off"-->
+            <!--class="layui-input admin-input admin-input-verify">-->
+            <!--<img class="admin-captcha" src=""-->
+            <!--onclick="updateVerify()">-->
+            <!--</div>-->
+        </form>
+        <a href="home.html" target="_parent">
+            <button class="layui-btn admin-button" type="submit" lay-filter="formDemo">Login</button>
+        </a>
+        <div class="register-forget">
+            <a href="home.html" target="_parent" id="forget">
+                <i class="layui-icon layui-icon-tips" style="font-size: 15px;"></i>
+                <span>忘记密码</span>
+            </a>
+            <a href="home.html" target="_parent" id="register">
+                <i class="layui-icon layui-icon-survey" style="font-size: 15px;"></i>
+                <span>注册</span>
+            </a>
+        </div>
+    </div>
+</div>
+<script>
+    function updateVerify() {
+    }
+</script>
+</body>
+</html>
