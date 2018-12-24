@@ -96,9 +96,9 @@
         try {
             var bHeight = iframe.contentWindow.document.body.scrollHeight;
             var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
-            var height = Math.min(bHeight, dHeight);
+            var height = Math.max(bHeight, dHeight);
             iframe.height = height;
-            console.log(height);
+            //console.log(bHeight,dHeight,height);
         } catch (ex) {
         }
     }

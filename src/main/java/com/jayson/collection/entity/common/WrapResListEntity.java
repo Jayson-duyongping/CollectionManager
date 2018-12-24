@@ -1,12 +1,12 @@
-package com.jayson.collection.entity;
+package com.jayson.collection.entity.common;
 
 import java.util.List;
 
-public class WrapResEntity {
+public class WrapResListEntity {
     private int code;
     private String msg;
     private int count;
-    private List<Object> data;
+    private List<Object> list;
 
     public int getCode() {
         return code;
@@ -32,11 +32,11 @@ public class WrapResEntity {
         this.count = count;
     }
 
-    public List<Object> getData() {
-        return data;
+    public List<Object> getList() {
+        return list;
     }
 
-    public void setData(List<Object> data) {
-        this.data = data;
+    public void setList(List<Object> list) {
+        this.list = list;
     }
 }

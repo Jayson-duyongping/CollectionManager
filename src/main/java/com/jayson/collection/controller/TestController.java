@@ -1,7 +1,7 @@
 package com.jayson.collection.controller;
 
 import com.jayson.collection.entity.TestBean;
-import com.jayson.collection.entity.WrapResEntity;
+import com.jayson.collection.entity.common.WrapResListEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,11 +26,11 @@ public class TestController {
                 bookList.add(totalList.get(i));
             }
         }
-        WrapResEntity wrapResEntity = new WrapResEntity();
+        WrapResListEntity wrapResEntity = new WrapResListEntity();
         wrapResEntity.setCode(0);
         wrapResEntity.setMsg("书籍信息");
         wrapResEntity.setCount(totalList.size());
-        wrapResEntity.setData(bookList);
+        wrapResEntity.setList(bookList);
         return wrapResEntity;
     }
 }
