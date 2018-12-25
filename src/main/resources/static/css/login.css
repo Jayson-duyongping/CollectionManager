@@ -16,6 +16,7 @@ input::-webkit-input-placeholder {
     color: #333333;
 }
 
+/*整个登陆框背景样式*/
 .admin-login-background {
     width: 300px;
     height: 300px;
@@ -26,26 +27,36 @@ input::-webkit-input-placeholder {
     margin-top: -100px;
 }
 
-.admin-header {
-    margin-top: -100px;
-    margin-bottom: 20px;
-}
-
-.admin-logo {
-    width: 280px;
-}
-
-.admin-button {
-    font-size: 16px;
+/*标题样式*/
+.admin-login-background h1 {
     font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
 }
 
+/*头像样式*/
+.register-left img,
+.login_input img {
+    width: 120px;
+    height: 120px;
+    margin: 20px 85px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 100px;
+}
+
+.edit-box {
+    margin-bottom: 10px;
+}
+
+/*输入框样式*/
 .admin-input {
     border: 1px solid #2E2D3C;
     background-color: rgba(255, 255, 255, 0.3);
     height: 50px;
-    width: 300px;
+    width: 290px;
     padding-bottom: 0px;
+    padding-left: 10px;
 }
 
 .admin-input::-webkit-input-placeholder {
@@ -57,81 +68,40 @@ input::-webkit-input-placeholder {
 .admin-input-username {
     border-top-style: solid;
 }
-.edit-box{
-    margin-bottom: 10px;
-}
 
-.admin-input-verify {
-    border-radius: 0 0 10px 10px;
-}
-
+/*登录按钮样式*/
 .admin-button {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
     width: 300px;
     height: 50px;
-    border-radius: 4px;
+    border: 0px;
     background-color: rgba(0, 150, 136, 0.6);
 }
 
 .admin-button:hover {
-    background-color: rgb(0, 150, 136);
+    background-color: rgba(0, 150, 136, 0.8);
 }
 
-.admin-icon {
-    margin-left: 260px;
-    margin-top: 10px;
-    font-size: 30px;
-}
-
-i {
-    position: absolute;
-}
-
-.admin-captcha {
-    position: absolute;
-    margin-left: 205px;
-    margin-top: -40px;
-}
-
+/*注册忘记密码相关样式*/
 .register-forget {
-    background: none;
-    height: 30px;
+    margin-top: 10px;
+    width: 300px;
     position: relative;
-    padding-right: 0px;
-    line-height: 30px;
-    margin-top: 5px;
 }
 
-.register-forget i {
-    margin-top: 2px;
-}
-
-.register-forget span {
-    margin-left: 22px;
-}
-
-#register, #forget {
+.register-forget a {
+    text-decoration: none;
+    font-size: 0.8em;
     color: white;
 }
 
-#register {
+.register-forget #register {
     position: absolute;
     right: 0px;
-    margin-right: 0px;
 }
 
-#register:hover, #forget:hover {
-    color: #00F7DE;
-}
-
-#head_upload {
-    background: #009688;
-    border: none;
-    width: 300px;
-    height: 50px;
-    border-radius: 2px;
-    padding: 5px 10px;
-    text-align: center;
-}
 /*注册主界面布局*/
 .admin-register-background {
     width: 700px;
@@ -142,14 +112,28 @@ i {
     margin-left: -150px;
     margin-top: -100px;
 }
-.register-left{
+
+.register-left {
     float: left;
     width: 300px;
-    margin-top:100px;
+    margin-top: 100px;
 }
-.register-right{
+
+.register-right {
     float: left;
     width: 300px;
     margin-top: 20px;
     margin-left: 50px;
+}
+
+/*上传按钮*/
+#head_upload {
+    background: #009688;
+    border: none;
+    color: white;
+    width: 300px;
+    height: 50px;
+    border-radius: 2px;
+    padding: 5px 10px;
+    text-align: center;
 }

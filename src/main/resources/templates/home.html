@@ -1,95 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Collction</title>
+    <meta charset="utf-8"/>
+    <title>主页</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="../static/_layui/css/layui.css">
-    <script src="../static/_layui/layui.js"></script>
+    <script src="../static/common/commonCss.js"></script>
+    <script src="../static/common/commonJs.js"></script>
+    <link rel="stylesheet" href="../static/css/home.css">
+    <script type="text/javascript">
+        $(function () {
+            $("ul.uMenu li ul").hide();
+            $("ul.uMenu li > a").click(function () {
+                $(this).siblings("ul").slideToggle();
+            });
+            $("ul.uItem li").click(function () {
+                $("ul.uItem li").css("background", "#282b33");
+                $(this).css("background", "#1e9fff");
+            });
+        });
+    </script>
 </head>
-<body class="layui-layout-body">
-<div class="layui-layout layui-layout-admin">
-    <div class="layui-header">
-        <div class="layui-logo">My Collection</div>
-        <!-- 头部区域（可配合layui已有的水平导航） -->
-        <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item"><a href="view/index.html" target="option">首页</a></li>
-            <li class="layui-nav-item"><a href="">信息管理</a></li>
-            <li class="layui-nav-item">
-                <a href="javascript:;">常用工具</a>
-                <dl class="layui-nav-child">
-                    <dd><a href="">通讯录</a></dd>
-                    <dd><a href="">记事本</a></dd>
-                </dl>
-            </li>
-        </ul>
-        <ul class="layui-nav layui-layout-right">
-            <li class="layui-nav-item">
-                <a href="javascript:;">
-                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
-                    JAYSON
-                </a>
-                <dl class="layui-nav-child">
-                    <dd><a href="">基本资料</a></dd>
-                    <dd><a href="">安全设置</a></dd>
-                </dl>
-            </li>
-            <li class="layui-nav-item">
-                <a href="login.html" target="_parent">
-                    退出
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="layui-side layui-bg-black">
-        <div class="layui-side-scroll">
-            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-            <ul class="layui-nav layui-nav-tree" lay-filter="test">
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a class="" href="javascript:;">Mine</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="view/mine/my_info.html" target="option" id="myPage">个人主页</a></dd>
-                        <dd><a href="view/mine/my_work.html" target="option">工作经历</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item">
-                    <a href="javascript:;">Collection</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">图片</a></dd>
-                        <dd><a href="javascript:;">音乐</a></dd>
-                        <dd><a href="javascript:;">视频</a></dd>
-                        <dd><a href="view/collection/col_book.html" target="option">书籍</a></dd>
-                        <dd><a href="javascript:;">文章</a></dd>
-                    </dl>
-                </li>
-                <li class="layui-nav-item"><a href="">通讯录</a></li>
-                <li class="layui-nav-item"><a href="">记事本</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="layui-body" style="background-color: #f2f2f2;height: 100%;padding-bottom: 30px">
-        <!-- 内容主体区域 -->
-        <iframe id="option" name="option" src="view/index.html"
-                style="overflow: hidden;padding: 15px;margin:0 0 1em;"
-                scrolling="no" frameborder="no" width="1700px"></iframe>
-    </div>
-
-    <!--<div class="layui-footer">-->
-    <!--&lt;!&ndash; 底部固定区域 &ndash;&gt;-->
-    <!--© layui.com - 底部固定区域-->
-    <!--</div>-->
+<body>
+<div id="header">
+    <h1>Collection</h1>
 </div>
-<script>
-    //JavaScript代码区域
-    layui.use('element', function () {
-        var element = layui.element;
 
-    });
-</script>
+<div id="nav">
+    <ul class="uMenu">
+        <li>
+            <a class="topMenu" href="javascript:;">
+                Mine
+                <img src="../static/image/icon_up.png">
+            </a>
+            <ul class="uItem">
+                <li><a href="view/mine/my_info.html" target="option" id="myPage">个人主页</a></li>
+                <li><a href="view/mine/my_work.html" target="option">工作经历</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="topMenu" href="javascript:;">
+                Collection
+                <img src="../static/image/icon_up.png">
+            </a>
+            <ul class="uItem">
+                <li><a href="view/collection/col_picture.html" target="option">图片</a></li>
+                <li><a href="javascript:;">音乐</a></li>
+                <li><a href="javascript:;">视频</a></li>
+                <li><a href="view/collection/col_book.html" target="option">书籍</a></li>
+                <li><a href="javascript:;">文章</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="topMenu" href="javascript:;">通讯录</a>
+            <a class="topMenu" href="javascript:;">记事本</a>
+        </li>
+    </ul>
+</div>
+
+<div id="section">
+    <!-- 内容主体区域 -->
+    <iframe id="option" name="option" src="view/index.html"
+            style="overflow: hidden;padding: 15px;margin:0 0 1em;"
+            scrolling="no" frameborder="no" width="1700px"></iframe>
+</div>
+
+<div id="footer">
+    Copyright ? jayson.com
+</div>
+
 <script type="text/javascript">
     document.getElementById("myPage").click();
+
     //计算iframe id = option 的高度
     function reinitIframe() {
         var iframe = document.getElementById("option");
@@ -98,7 +79,6 @@
             var dHeight = iframe.contentWindow.document.documentElement.scrollHeight;
             var height = Math.max(bHeight, dHeight);
             iframe.height = height;
-            //console.log(bHeight,dHeight,height);
         } catch (ex) {
         }
     }

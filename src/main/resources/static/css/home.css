@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 微软雅黑;
+}
+
+body {
+    width: 1900px;
+    background-color: #393d49;
+}
+
+#header {
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+#nav {
+    line-height: 30px;
+    background-color: #393d49;
+    height: 100%;
+    max-width: 180px;
+    width: 180px;
+    float: left;
+}
+
+#section {
+    max-width: 1700px;
+    width: 1700px;
+    float: left;
+    background-color: #f2f2f2;
+    height: 100%;
+    padding-bottom: 30px
+}
+
+#footer {
+    color: white;
+    clear: both;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    padding: 5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul.uMenu {
+    width: 180px;
+}
+
+.topMenu img {
+    width: 10px;
+    float: right;
+    margin-right: 20px;
+    margin-top: 15px;
+    background-image: url("../image/icon_up.png");
+}
+
+a {
+    text-decoration-line: none;
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+}
+
+ul.uItem a {
+    display: block;
+    font-size: 0.8em;
+}
+
+ul.uMenu li > .topMenu {
+    background: #393d49;
+    display: block;
+    height: 40px;
+    padding-left: 15px;
+    line-height: 40px;
+    /*border-left: 12px solid #ca3a3d;*/
+}
+
+ul.uItem li {
+    /*border-left: 20px solid #fa5659;*/
+    background: #282b33;
+    color: white;
+    height: 35px;
+    width: 180px;
+    line-height: 35px;
+    cursor: pointer;
+    font-size: 16px;
+    text-indent: 25px;
+}
