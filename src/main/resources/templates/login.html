@@ -13,10 +13,10 @@
     <div>
     </div>
     <div class="admin-login-background">
-        <h1>Collection Manager</h1>
+        <h1>Collection&nbsp;Manager</h1>
         <div class="login_input">
             <!--头像-->
-            <img src="../static/image/head_icon.png">
+            <img id="headIcon" src="../static/image/deault_head_icon.jpg">
             <div class="edit-box">
                 <input type="text" name="username" placeholder="请输入用户名"
                        autocomplete="off"
@@ -43,7 +43,17 @@
     </div>
 </div>
 <script>
-    $("#login").unbind("click").bind("click", function () {
+    //获取本地储存头像和用户名
+    if (localStorage.headicon != null && localStorage.headicon != "") {
+        $("#headIcon").attr("src", localStorage.headicon);
+    }
+    if (localStorage.username != null && localStorage.username != "") {
+        $("input[name=username]").text(localStorage.username);
+    }
+    /**
+     * 登录操作
+     */
+    $("#login").bind("click", function () {
         var name = $("input[name=username]").val();
         var pwd = $("input[name=password]").val();
         if (name == null || name == "") {
@@ -54,16 +64,19 @@
             alert("请输入密码")
             return false;
         }
-        window.location.replace("home.html");
-        // $.ajax({
-        //     url: HostPort() + "login",
-        //     type: "post",
-        //     data: {"username": name, "password": pwd},
-        //     async: false,
-        //     success: function (res) {
-        //         console.log(res);
-        //     }
-        // });
+        $.ajax({
+            url: HostPort() + "user/login",
+            type: "post",
+            data: {"username": name, "password": pwd},
+            async: false,
+            success: function (rep) {
+                console.log(rep);
+                alert(rep.msg)
+                if (rep.code == 1) {
+                    window.location.replace("home.html");
+                }
+            }
+        });
     })
 </script>
 </body>

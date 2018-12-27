@@ -1,4 +1,4 @@
-package com.jayson.collection.entity;
+package com.jayson.collection.domain;
 
 public class TestBean {
     private int id;

@@ -1,6 +1,4 @@
-package com.jayson.collection.entity.common;
-
-import java.util.List;
+package com.jayson.collection.domain.common;
 
 public class WrapResObjEntity {
     private int code;

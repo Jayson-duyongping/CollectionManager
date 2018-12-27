@@ -1,7 +1,7 @@
 package com.jayson.collection.controller;
 
-import com.jayson.collection.entity.TestBean;
-import com.jayson.collection.entity.common.WrapResListEntity;
+import com.jayson.collection.domain.TestBean;
+import com.jayson.collection.domain.common.WrapResListEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;

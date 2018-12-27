@@ -10,9 +10,12 @@ body {
 }
 
 #header {
+    position: relative;
     color: white;
     text-align: center;
     padding: 5px;
+    width: 1900px;
+    background-color: #2b2b33;
 }
 
 #nav {
@@ -25,8 +28,8 @@ body {
 }
 
 #section {
-    max-width: 1700px;
-    width: 1700px;
+    max-width: 1720px;
+    width: 1720px;
     float: left;
     background-color: #f2f2f2;
     height: 100%;
@@ -40,6 +43,53 @@ body {
     line-height: 30px;
     text-align: center;
     padding: 5px;
+    width: 1900px;
+    background-color: #2b2b33;
+}
+
+/*用户信息一栏——用户*/
+#header #userRight {
+    position: absolute;
+    right: 50px;
+    top: 0px;
+    height: 50px;
+    line-height: 50px;
+}
+
+#header #userRight img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+    border: 2px solid #ffffff;
+    border-radius: 100px;
+}
+
+#header #userRight #userInfo {
+    display: inline-block;
+    height: 47px;
+    width: 150px;
+    line-height: 47px;
+    border-bottom: 5px solid #5FB87B;
+}
+
+/*用户信息一栏——弹框效果*/
+#header #userInfo ul {
+    background-color: white;
+    margin-top: 10px;
+    border-radius: 4px;
+    border: 1px solid #D2D2D2;
+    box-shadow: darkgrey 1px 1px 15px 1px;
+}
+
+#header #userInfo li a {
+    color: black;
+}
+
+/*用户信息一栏——退出*/
+#header #quit {
+    float: right;
+    margin-left: 20px;
 }
 
 ul {

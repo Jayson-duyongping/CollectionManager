@@ -1,4 +1,4 @@
-package com.jayson.collection.entity.common;
+package com.jayson.collection.domain.common;
 
 public class WrapTipEntity {
     private int code;

@@ -15,98 +15,145 @@
     <div class="admin-register-background">
         <h1 style="font-weight: bold;text-align: center;margin-bottom: 20px;color: white;font-family: 微软雅黑">
             Collection Manager</h1>
-        <form class="layui-form" action="">
-            <!--头像-->
-            <div class="register-left">
-                <img src="../static/image/head_icon.png">
-                <a href="home.html" target="_parent">
-                    <button class="admin-button" id="head_upload_res">Upload</button>
+        <!--头像-->
+        <div class="register-left">
+            <img id="head_icon" src="../static/image/deault_head_icon.jpg">
+            <a href="javascript:;" id="head_upload">Upload
+                <input type="file" name="file" accept="image/*" id="head_upload_res">
+            </a>
+        </div>
+        <div class="register-right">
+            <div class="edit-box">
+                <input type="text" name="username" placeholder="请输入用户名"
+                       autocomplete="off"
+                       required="required"
+                       class="admin-input admin-input-username">
+            </div>
+            <div class="edit-box">
+                <input type="password" name="password"
+                       placeholder="请输入密码"
+                       autocomplete="off"
+                       required="required"
+                       class="admin-input">
+            </div>
+            <div class="edit-box">
+                <input type="password" name="sure_password"
+                       placeholder="请确认密码"
+                       autocomplete="off"
+                       required="required"
+                       class="admin-input">
+            </div>
+            <div class="edit-box">
+                <input type="text" name="phone"
+                       placeholder="手机号码"
+                       autocomplete="off"
+                       class="admin-input">
+            </div>
+            <div class="edit-box">
+                <input type="text" name="sina"
+                       placeholder="新浪微博"
+                       autocomplete="off"
+                       class="admin-input">
+            </div>
+            <div class="edit-box">
+                <input type="text" name="qq"
+                       placeholder="qq"
+                       autocomplete="off"
+                       class="admin-input">
+            </div>
+            <div class="edit-box">
+                <input type="text" name="wx"
+                       placeholder="微信"
+                       autocomplete="off"
+                       class="admin-input">
+            </div>
+            <a id="register" target="_parent">
+                <button class="admin-button" type="submit">Register</button>
+            </a>
+            <div class="register-forget">
+                <a href="login.html" target="_parent">
+                    <span>返回登陆</span>
                 </a>
             </div>
-            <div class="register-right">
-                <div class="edit-box">
-                    <input type="text" name="username" placeholder="请输入用户名"
-                           autocomplete="off"
-                           required="required"
-                           class="admin-input admin-input-username">
-                </div>
-                <div class="edit-box">
-                    <input type="password" name="password"
-                           placeholder="请输入密码"
-                           autocomplete="off"
-                           required="required"
-                           class="admin-input">
-                </div>
-                <div class="edit-box">
-                    <input type="password" name="password"
-                           placeholder="请确认密码"
-                           autocomplete="off"
-                           required="required"
-                           class="admin-input">
-                </div>
-                <div class="edit-box">
-                    <input type="password" name="phone"
-                           placeholder="手机号码"
-                           autocomplete="off"
-                           class="admin-input">
-                </div>
-                <div class="edit-box">
-                    <input type="password" name="phone"
-                           placeholder="新浪微博"
-                           autocomplete="off"
-                           class="admin-input">
-                </div>
-                <div class="edit-box">
-                    <input type="password" name="phone"
-                           placeholder="qq"
-                           autocomplete="off"
-                           class="admin-input">
-                </div>
-                <div class="edit-box">
-                    <input type="password" name="phone"
-                           placeholder="微信"
-                           autocomplete="off"
-                           class="admin-input">
-                </div>
-                <a href="home.html" target="_parent">
-                    <button class="admin-button" type="submit">Register</button>
-                </a>
-                <div class="register-forget">
-                    <a href="login.html" target="_parent" id="register">
-                        <span>返回登陆</span>
-                    </a>
-                </div>
-            </div>
-        </form>
+        </div>
     </div>
 </div>
 <script>
-    //JavaScript代码区域
-    layui.use(['element', 'upload'], function () {
-        var element = layui.element;
-        var upload = layui.upload;
-        //执行实例
-        upload.render({
-            elem: '#head_upload_res' //绑定元素
-            , url: HostPort() + 'fileUpload' //上传接口
-            , accept: "file"
-            , data: {
-                type: "1"
-            }
-            , done: function (res) {
-                //上传完毕回调
-                if (res.content != null && res.content != "") {
-                    var headImg = document.getElementsByClassName("layui-circle")[0];
-                    headImg.src = res.content;
+    var headPath;
+    /**
+     * 上传头像
+     * @type {boolean}
+     */
+    var uploading = false;
+    $("#head_upload_res").on("change", function () {
+        if (uploading) {
+            alert("文件正在上传中，请稍候");
+            return false;
+        }
+        var formData = new FormData();
+        formData.append("file", $('#head_upload_res')[0].files[0]);
+        formData.append("type", "1");
+        $.ajax({
+            url: HostPort() + "fileUpload",
+            type: 'POST',
+            cache: false,
+            data: formData,
+            //必须false才会避开jQuery对 formdata 的默认处理,XMLHttpRequest会对 formdata 进行正确的处理
+            processData: false,
+            //必须false才会自动加上正确的Content-Type
+            contentType: false,
+            beforeSend: function () {
+                uploading = true;
+            },
+            success: function (data) {
+                alert(data.msg);
+                console.log(data)
+                if (data.code == 1) {
+                    headPath = data.content;
+                    $("#head_icon").attr("src", headPath);
                 }
-                alert(res.msg);
-            }
-            , error: function () {
-                //请求异常回调
-                alert(res.msg);
+                uploading = false;
             }
         });
     });
+    /**
+     * 注册
+     */
+    $("#register").bind("click", function () {
+        var username = $("input[name=username]").val();
+        var password = $("input[name=password]").val();
+        var sure_password = $("input[name=sure_password]").val();
+        var phone = $("input[name=phone]").val();
+        var sina = $("input[name=sina]").val();
+        var qq = $("input[name=qq]").val();
+        var wx = $("input[name=wx]").val();
+        if (headPath == null && headPath == "") {
+            alert("请上传头像");
+        }
+        if (password != sure_password) {
+            alert("输入密码必须要一致");
+            return false;
+        }
+        $.ajax({
+            url: HostPort() + "user/register",
+            type: "post",
+            data: {
+                "headicon": headPath, "username": username, "password": password,
+                "phonenumber": phone, "sina": sina, "qq": qq, "wx": wx
+            },
+            async: false,
+            success: function (rep) {
+                console.log(rep);
+                alert(rep.msg)
+                //本地储存头像和用户名
+                localStorage.headicon = headPath;
+                localStorage.username = username;
+                if (rep.code == 1) {
+                    window.location.replace("login.html");
+                }
+            }
+        });
+    })
 </script>
 </body>
 </html>
