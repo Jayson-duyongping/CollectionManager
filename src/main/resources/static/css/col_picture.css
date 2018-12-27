@@ -1,0 +1,76 @@
+body {
+    font-family: 微软雅黑;
+    background: #2b2b2b;
+}
+
+/*左侧相册*/
+.album_left {
+    float: left;
+    width: 1500px;
+    height: 345px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*右侧相册*/
+.album_right {
+    float: right;
+    width: 950px;
+    height: 345px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+table {
+    float: left;
+    width: 900px;
+    text-align: center;
+    border-left: 10px solid #fff;
+    border-top: 10px solid #fff;
+}
+
+table th {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-right: 10px solid #fff;
+    border-bottom: 10px solid #fff;
+    background: url(../../static/image/草原上的狐狸20181003204331.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.first-pic {
+    width: 600px;
+    height: 300px;
+}
+
+/*右侧标题*/
+.album_title_right {
+    float: left;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 30px;
+    text-align: center;
+    line-height: 20px;
+    border: 2px solid whitesmoke;
+    background-color: #C2BE9E;
+    color: #2b2b33;
+    font-weight: bold;
+    border-radius: 0 5px 5px 0;
+}
+
+/*左侧标题*/
+.album_title_left {
+    float: left;
+    clear: both;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 30px;
+    text-align: center;
+    line-height: 20px;
+    border: 2px solid whitesmoke;
+    background-color: #C2BE9E;
+    color: #2b2b33;
+    font-weight: bold;
+    border-radius: 5px 0px 0px 5px;
+}
