@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>书籍</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="../../../static/common/commonSecond.js"></script>
+    <style>
+        /*书籍菜单导航*/
+        .book-menu li {
+            list-style: none;
+            float: left;
+            cursor: pointer;
+            padding: 10px;
+            margin-left: 10px;
+            position: relative;
+            width: 50px;
+            text-align: center;
+            color: white;
+        }
+
+        .book-menu::after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .book-menu ul::after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .book-menu li::after {
+            border-radius: 3px;
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            z-index: -1;
+            background-color: #09818D;
+            -moz-transform: skewX(-25deg);
+            -ms-transform: skewX(-25deg);
+            -webkit-transform: skewX(-25deg);
+            transform: skewX(-25deg);
+        }
+
+        .book-menu li:hover::after {
+            background-color: #58CAD0;
+        }
+
+        /*书架的布局*/
+        .book-bg ul {
+            list-style: none;
+        }
+
+        .book-bg ul > li {
+            background-color: #5f3f3f;
+            height: 200px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .book-bg .second-ul > li {
+            display: inline;
+            float: left;
+            margin-top: 0px;
+        }
+
+        .book-bg .second-ul > li div {
+            height: 200px;
+            line-height: 200px;
+            width: 140px;
+            text-align: center;
+            margin-right: 40px;
+            background: url("../../../static/image/book_f.png") no-repeat;
+            background-size: 100% 100%;
+        }
+
+        #book-line .book-tip {
+            position: absolute;
+            background-color: #007fff;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: white;
+            -webkit-transform: rotate(315deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            top: 10px;
+            left: -25px;
+        }
+    </style>
+</head>
+<body>
+<div class="book-menu">
+    <ul>
+        <li>IT</li>
+        <li>艺术</li>
+        <li>文学</li>
+        <li>小说</li>
+        <li>漫画</li>
+    </ul>
+</div>
+<div class="book-bg">
+    <ul id="book-line">
+        <li>
+            <ul class="second-ul">
+                <li>
+                    <div>技术书</div>
+                </li>
+                <li>
+                    <div>技术书</div>
+                </li>
+                <li>
+                    <div>技术书</div>
+                </li>
+            </ul>
+            <div class="book-tip">
+                IT书籍
+            </div>
+        </li>
+        <li>
+            <ul class="second-ul">
+                <li>
+                    <div>技术书</div>
+                </li>
+                <li>
+                    <div>技术书</div>
+                </li>
+                <li>
+                    <div>技术书</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+
+    });
+</script>
+</body>
+</html>

@@ -5,9 +5,13 @@
     <title>相册</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <script src="../../../static/common/commonSecond.js"></script>
+    <!--3D画廊样式-->
     <script src="../../../static/common/common3D.js"></script>
+    <!--相框样式-->
+    <link rel="stylesheet" href="../../../static/css/col_picture.css">
 </head>
 <body>
+<!--3D自动播放-->
 <div class="container">
     <section id="dg-container" class="dg-container">
         <div class="dg-wrapper">
@@ -30,9 +34,42 @@
         </nav>
     </section>
 </div>
+<!--网格相框-->
+<div class="album-bg">
+    <div class="album_left">
+        <table border="0px" cellspacing="0">
+            <tr>
+                <th class="first-pic" colspan="3" rowspan="3"></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
+        <div class="album_title_right">游戏</div>
+    </div>
+    <div class="album_right">
+        <ul>
+            <li>动漫</li>
+            <li>游戏</li>
+            <li>原画</li>
+            <li>景物</li>
+            <li>美女</li>
+        </ul>
+    </div>
+</div>
 <script type="text/javascript" src="../../../static/_plugin/3DGallery/js/jquery.gallery.js"></script>
 <script type="text/javascript">
     $(function () {
+        // 相框默认第一张高亮
+        $(".first-pic").css("opacity", "1");
+        // 设置3D画廊
         $('#dg-container').gallery({
             current: 0,
             autoplay: true,

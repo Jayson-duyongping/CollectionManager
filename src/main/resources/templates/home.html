@@ -12,7 +12,7 @@
             /**
              * 菜单栏样式操作
              */
-            $("ul.uMenu li ul").hide();
+            // $("ul.uMenu li ul").hide();
             $("ul.uMenu li > a").click(function () {
                 $(this).siblings("ul").slideToggle();
             });
@@ -20,6 +20,8 @@
                 $("ul.uItem li").css("background", "#282b33");
                 $(this).css("background", "#1e9fff");
             });
+            // 个人主页默认选中
+            $("#myPageLi").css("background", "#1e9fff");
             /**
              * 点击用户
              */
@@ -54,7 +56,7 @@
                 <img src="../static/image/icon_up.png">
             </a>
             <ul class="uItem">
-                <li><a href="view/mine/my_info.html" target="option" id="myPage">个人主页</a></li>
+                <li id="myPageLi"><a href="view/mine/my_info.html" target="option" id="myPage">个人主页</a></li>
                 <li><a href="view/mine/my_work.html" target="option">工作经历</a></li>
             </ul>
         </li>
@@ -64,7 +66,7 @@
                 <img src="../static/image/icon_up.png">
             </a>
             <ul class="uItem">
-                <li><a href="view/collection/test.html" target="option">图片</a></li>
+                <li><a href="view/collection/col_picture.html" target="option">图片</a></li>
                 <li><a href="javascript:;">音乐</a></li>
                 <li><a href="javascript:;">视频</a></li>
                 <li><a href="view/collection/col_book.html" target="option">书籍</a></li>
