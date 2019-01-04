@@ -1,4 +1,7 @@
 body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
     font-family: 微软雅黑;
 }
 
@@ -86,7 +89,7 @@ table th:hover {
     background-color: rgba(1, 170, 237, 0.5);
     height: 40px;
     font-weight: bold;
-    color: #5f3f3f;
+    color: #FFFFFF;
     line-height: 40px;
     margin-bottom: 20px;
     cursor: pointer;

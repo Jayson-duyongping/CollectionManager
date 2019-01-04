@@ -2,11 +2,12 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
+    background: white;
     font-family: 微软雅黑;
 }
 
 #work_line {
-    width: 800px;
+    width: 1000px;
 }
 
 ul.timeline {
@@ -60,7 +61,7 @@ ul.timeline li.alt .number {
 
 ul.timeline li .content {
     margin-left: 180px;
-    width: 500px;
+    width: 700px;
 }
 
 ul.timeline li .content div {

@@ -29,6 +29,19 @@
             $("#userset").hover(function () {
                 $("#userInfo ul").show();
             })
+            /**
+             * 点击上传按钮
+             */
+            $("#all_upload").mouseover(function(){
+                var p = $(this).offset();  //获取当前位置
+                $("#box-data").show().css({ //控制弹框位置为当前位置
+                    left: p.left - 15,
+                    top: p.top + 60
+                }).html("<p>电压值</p><p>" + value + "</p>");
+            });
+            $("#all_upload").mouseout(function () {
+                $("#box-data").hide();
+            });
         });
     </script>
 </head>
@@ -69,13 +82,14 @@
                 <li><a href="view/collection/col_picture.html" target="option">图片</a></li>
                 <li><a href="javascript:;">音乐</a></li>
                 <li><a href="javascript:;">视频</a></li>
-                <li><a href="view/collection/col_book.html" target="option">书籍</a></li>
+                <li><a href="view/collection/test_book.html" target="option">书籍</a></li>
                 <li><a href="javascript:;">文章</a></li>
             </ul>
         </li>
         <li>
             <a class="topMenu" href="javascript:;">通讯录</a>
             <a class="topMenu" href="javascript:;">记事本</a>
+            <div id="all_upload"><span>上传</span></div>
         </li>
     </ul>
 </div>
@@ -84,11 +98,15 @@
     <!-- 内容主体区域 -->
     <iframe id="option" name="option" src="view/index.html"
             style="overflow: hidden;padding: 15px;margin:0 0 1em;"
-            scrolling="no" frameborder="no" width="1700px"></iframe>
+            scrolling="no" frameborder="no" width="1700px" height="850px"></iframe>
 </div>
 
 <div id="footer">
     Copyright ? jayson.com
+</div>
+
+<div id="box-data"
+     style="width: 120px; height: 50px; background-color: rgba(0,0,0,0.43);position: absolute;display:none;z-index:9999;border-radius:10px;text-align: center;">
 </div>
 
 <script type="text/javascript">
