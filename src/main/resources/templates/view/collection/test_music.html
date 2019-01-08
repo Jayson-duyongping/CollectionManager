@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="../../../static/common/commonSecond.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 微软雅黑;
+        }
+
+        .music-bg {
+            margin-bottom: 20px;
+            width: 550px;
+            height: 200px;
+            background: url("../../../static/image/music_bg.png");
+        }
+
+        /*设置左侧标题显示*/
+        .music-title {
+            float: left;
+            height: 200px;
+            width: 280px;
+            color: white;
+            text-align: center;
+        }
+
+        .music-title .title_span {
+            margin-top: 50px;
+        }
+
+        .music-title .title_span a {
+            text-decoration: none;
+            border: 1px solid white;
+            color: white;
+            font-size: 14px;
+            border-radius: 4px;
+            padding: 5px 10px 5px 10px;
+        }
+
+        /*设置右边喜欢音乐*/
+        .music-num {
+            float: left;
+            margin-top: 10px;
+            margin-left: 10px;
+            background-color: white;
+            height: 180px;
+            width: 120px;
+        }
+
+        .music-num .music-cover {
+            border-radius: 5px;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+
+        .music-num .title {
+            margin-left: 10px;
+            font-size: 15px;
+            color: #2b2b2b;
+        }
+
+        .music-num .desc {
+            margin-left: 10px;
+            font-size: 12px;
+            color: #4E5465;
+        }
+    </style>
+</head>
+<body>
+<div id="music-container">
+    <div class="music-bg">
+        <div class="music-title">
+            <div class="title_span">
+                <h3>BGM</h3><a href="#">查看更多</a>
+            </div>
+        </div>
+        <div class="music-num">
+            <img class="music-cover" src="../../../static/image/music_tmp1.png"/>
+            <span class="title">音乐</span><br>
+            <span class="desc">最喜欢的歌</span>
+        </div>
+        <div class="music-num">
+            <img class="music-cover" src="../../../static/image/music_tmp2.png"/>
+            <span class="title">音乐</span><br>
+            <span class="desc">最喜欢的歌</span>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        var musicItem1 = $(".music-bg").clone();
+        var musicItem2 = $(".music-bg").clone();
+        //模拟添加两个
+        $("#music-container").append(musicItem1);
+        $("#music-container").append(musicItem2);
+    });
+</script>
+</body>
+</html>

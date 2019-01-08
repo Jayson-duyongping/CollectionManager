@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jayson.collection.dao.UserDao">
+    <resultMap id="BaseResultMap" type="com.jayson.collection.domain.User">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="username" jdbcType="VARCHAR" property="username"/>
+        <result column="password" jdbcType="VARCHAR" property="password"/>
+        <result column="headicon" jdbcType="VARCHAR" property="headicon"/>
+        <result column="phonenumber" jdbcType="VARCHAR" property="phonenumber"/>
+        <result column="sina" jdbcType="VARCHAR" property="sina"/>
+        <result column="qq" jdbcType="VARCHAR" property="qq"/>
+        <result column="wx" jdbcType="VARCHAR" property="wx"/>
+        <result column="nickname" jdbcType="VARCHAR" property="nickname"/>
+        <result column="sex" jdbcType="VARCHAR" property="sex"/>
+        <result column="birthday" jdbcType="VARCHAR" property="birthday"/>
+        <result column="sketch" jdbcType="VARCHAR" property="sketch"/>
+        <result column="address" jdbcType="VARCHAR" property="address"/>
+        <result column="description" jdbcType="VARCHAR" property="description"/>
+        <result column="hobby" jdbcType="VARCHAR" property="hobby"/>
+        <result column="skill" jdbcType="VARCHAR" property="skill"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, username, password, headicon, phonenumber, sina, qq, wx, nickname, sex, birthday, 
+    sketch, address, description, hobby, skill
+  </sql>
+    <!--根据id查询-->
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_user
+        where id = #{id,jdbcType=INTEGER}
+    </select>
+    <!--根据姓名查询-->
+    <select id="selectByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from t_user
+        where username = #{username,jdbcType=VARCHAR}
+    </select>
+    <!--根据id删除-->
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_user
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+    <!--插入数据-->
+    <insert id="insert" parameterType="com.jayson.collection.domain.User">
+    insert into t_user (id, username, password, 
+      headicon, phonenumber, sina, 
+      qq, wx, nickname, sex, 
+      birthday, sketch, address, 
+      description, hobby, skill
+      )
+    values (#{id,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{headicon,jdbcType=VARCHAR}, #{phonenumber,jdbcType=VARCHAR}, #{sina,jdbcType=VARCHAR}, 
+      #{qq,jdbcType=VARCHAR}, #{wx,jdbcType=VARCHAR}, #{nickname,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, 
+      #{birthday,jdbcType=VARCHAR}, #{sketch,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
+      #{description,jdbcType=VARCHAR}, #{hobby,jdbcType=VARCHAR}, #{skill,jdbcType=VARCHAR}
+      )
+  </insert>
+    <!--选择性插入-->
+    <insert id="insertSelective" parameterType="com.jayson.collection.domain.User">
+        insert into t_user
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="username != null">
+                username,
+            </if>
+            <if test="password != null">
+                password,
+            </if>
+            <if test="headicon != null">
+                headicon,
+            </if>
+            <if test="phonenumber != null">
+                phonenumber,
+            </if>
+            <if test="sina != null">
+                sina,
+            </if>
+            <if test="qq != null">
+                qq,
+            </if>
+            <if test="wx != null">
+                wx,
+            </if>
+            <if test="nickname != null">
+                nickname,
+            </if>
+            <if test="sex != null">
+                sex,
+            </if>
+            <if test="birthday != null">
+                birthday,
+            </if>
+            <if test="sketch != null">
+                sketch,
+            </if>
+            <if test="address != null">
+                address,
+            </if>
+            <if test="description != null">
+                description,
+            </if>
+            <if test="hobby != null">
+                hobby,
+            </if>
+            <if test="skill != null">
+                skill,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="username != null">
+                #{username,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="headicon != null">
+                #{headicon,jdbcType=VARCHAR},
+            </if>
+            <if test="phonenumber != null">
+                #{phonenumber,jdbcType=VARCHAR},
+            </if>
+            <if test="sina != null">
+                #{sina,jdbcType=VARCHAR},
+            </if>
+            <if test="qq != null">
+                #{qq,jdbcType=VARCHAR},
+            </if>
+            <if test="wx != null">
+                #{wx,jdbcType=VARCHAR},
+            </if>
+            <if test="nickname != null">
+                #{nickname,jdbcType=VARCHAR},
+            </if>
+            <if test="sex != null">
+                #{sex,jdbcType=VARCHAR},
+            </if>
+            <if test="birthday != null">
+                #{birthday,jdbcType=VARCHAR},
+            </if>
+            <if test="sketch != null">
+                #{sketch,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null">
+                #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null">
+                #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="hobby != null">
+                #{hobby,jdbcType=VARCHAR},
+            </if>
+            <if test="skill != null">
+                #{skill,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <!--选择性更新-->
+    <update id="updateBySelective" parameterType="com.jayson.collection.domain.User">
+        update t_user
+        <set>
+            <if test="username != null">
+                username = #{username,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                password = #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="headicon != null">
+                headicon = #{headicon,jdbcType=VARCHAR},
+            </if>
+            <if test="phonenumber != null">
+                phonenumber = #{phonenumber,jdbcType=VARCHAR},
+            </if>
+            <if test="sina != null">
+                sina = #{sina,jdbcType=VARCHAR},
+            </if>
+            <if test="qq != null">
+                qq = #{qq,jdbcType=VARCHAR},
+            </if>
+            <if test="wx != null">
+                wx = #{wx,jdbcType=VARCHAR},
+            </if>
+            <if test="nickname != null">
+                nickname = #{nickname,jdbcType=VARCHAR},
+            </if>
+            <if test="sex != null">
+                sex = #{sex,jdbcType=VARCHAR},
+            </if>
+            <if test="birthday != null">
+                birthday = #{birthday,jdbcType=VARCHAR},
+            </if>
+            <if test="sketch != null">
+                sketch = #{sketch,jdbcType=VARCHAR},
+            </if>
+            <if test="address != null">
+                address = #{address,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null">
+                description = #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="hobby != null">
+                hobby = #{hobby,jdbcType=VARCHAR},
+            </if>
+            <if test="skill != null">
+                skill = #{skill,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+    <!--更新用户表-->
+    <update id="update" parameterType="com.jayson.collection.domain.User">
+    update t_user
+    set username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      headicon = #{headicon,jdbcType=VARCHAR},
+      phonenumber = #{phonenumber,jdbcType=VARCHAR},
+      sina = #{sina,jdbcType=VARCHAR},
+      qq = #{qq,jdbcType=VARCHAR},
+      wx = #{wx,jdbcType=VARCHAR},
+      nickname = #{nickname,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      birthday = #{birthday,jdbcType=VARCHAR},
+      sketch = #{sketch,jdbcType=VARCHAR},
+      address = #{address,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      hobby = #{hobby,jdbcType=VARCHAR},
+      skill = #{skill,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
