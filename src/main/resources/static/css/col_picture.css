@@ -1,12 +1,6 @@
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: 微软雅黑;
-}
-
 .album-bg {
     position: relative;
+    margin-top: 10px;
     background: #2b2b2b;
     height: 365px;
     vertical-align: center;
@@ -84,8 +78,8 @@ table th:hover {
 
 .album_right ul li {
     text-align: center;
-    margin-right: 20px;
-    margin-left: -20px;
+    margin-right: 10px;
+    margin-left: 20px;
     background-color: rgba(1, 170, 237, 0.5);
     height: 40px;
     font-weight: bold;
