@@ -6,24 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <script src="../../../static/common/commonSecond.js"></script>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: 微软雅黑;
-        }
-
         .music-bg {
-            margin-bottom: 20px;
             width: 550px;
-            height: 200px;
+            height: 185px;
+            margin-top: 10px;
             background: url("../../../static/image/music_bg.png");
         }
 
         /*设置左侧标题显示*/
         .music-title {
             float: left;
-            height: 200px;
+            height: 185px;
             width: 280px;
             color: white;
             text-align: center;
@@ -48,7 +41,7 @@
             margin-top: 10px;
             margin-left: 10px;
             background-color: white;
-            height: 180px;
+            height: 165px;
             width: 120px;
         }
 
@@ -56,12 +49,12 @@
             border-radius: 5px;
             width: 100px;
             height: 100px;
-            margin: 10px;
+            margin: 10px 10px 0px 10px;
         }
 
         .music-num .title {
             margin-left: 10px;
-            font-size: 15px;
+            font-size: 14px;
             color: #2b2b2b;
         }
 
@@ -70,35 +63,176 @@
             font-size: 12px;
             color: #4E5465;
         }
+
+        /*单曲音乐列表*/
+        .music-list {
+            margin-top: 10px;
+        }
+
+        .music_li {
+            width: 448px;
+            height: 93px;
+            margin-bottom: 3px;
+            /*background-color: #93D1FF;*/
+        }
+
+        /*音乐搜索框div*/
+        .search-music {
+            margin-top: 10px;
+            width: 600px;
+            text-align: center;
+        }
+
+        /*音乐搜索框*/
+        .search-music input {
+            background-color: #eeeeee;
+            width: 300px;
+            height: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: 1px solid #e2e2e2;
+        }
+
+        /*流式按钮集div*/
+        #flow-music-tag {
+            width: 560px;
+            margin-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        /*流式按钮*/
+        .flow_btn {
+            width: auto;
+            height: 25px;
+            font-size: 12px;
+            margin-bottom: 8px;
+            margin-left: 2px;
+            margin-right: 2px;
+            color: #C2BE9E;
+            background: transparent;
+            border: 1px solid #C2BE9E;
+        }
+
+        /*音乐歌单*/
+        #music-order {
+            width: 600px;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        #music-order li {
+            margin-bottom: 10px;
+        }
+
+        /*更多歌单*/
+        #more_order {
+            width: 100px;
+            line-height: 30px;
+            margin: auto;
+            height: 30px;
+            font-size: 14px;
+            color: white;
+            background-color: #01AAED;
+            cursor: pointer;
+        }
+
+        #more_order:hover {
+            background-color: #007fff;
+        }
     </style>
 </head>
 <body>
-<div id="music-container">
-    <div class="music-bg">
-        <div class="music-title">
-            <div class="title_span">
-                <h3>BGM</h3><a href="#">查看更多</a>
+<!--音乐容器-->
+<div class="content-container">
+    <span class="model_title">热门专辑</span>
+    <!--音乐专辑-->
+    <div class="music-album">
+        <div class="music-bg">
+            <div class="music-title">
+                <div class="title_span">
+                    <h3>BGM</h3><a href="#">查看更多</a>
+                </div>
             </div>
-        </div>
-        <div class="music-num">
-            <img class="music-cover" src="../../../static/image/music_tmp1.png"/>
-            <span class="title">音乐</span><br>
-            <span class="desc">最喜欢的歌</span>
-        </div>
-        <div class="music-num">
-            <img class="music-cover" src="../../../static/image/music_tmp2.png"/>
-            <span class="title">音乐</span><br>
-            <span class="desc">最喜欢的歌</span>
+            <div class="music-num">
+                <img class="music-cover" src="../../../static/image/music_tmp1.png"/>
+                <span class="title">音乐</span><br>
+                <span class="desc">最喜欢的歌</span>
+            </div>
+            <div class="music-num">
+                <img class="music-cover" src="../../../static/image/music_tmp2.png"/>
+                <span class="title">音乐</span><br>
+                <span class="desc">最喜欢的歌</span>
+            </div>
         </div>
     </div>
 </div>
+
+<!--分类容器-->
+<div class="content-container">
+    <span class="model_title">分类歌单</span>
+    <div class="search-music">
+        <input type="text" placeholder="请输入您想要的音乐"/>
+    </div>
+    <div id="flow-music-tag">
+        <button class="flow_btn">知否知否</button>
+        <button class="flow_btn">君临天下</button>
+        <button class="flow_btn">剑客不能说</button>
+        <button class="flow_btn">可不可以</button>
+        <button class="flow_btn">有一种爱叫做放手</button>
+        <button class="flow_btn">转机</button>
+        <button class="flow_btn">默</button>
+        <button class="flow_btn">再给我一些勇气</button>
+        <button class="flow_btn">Merry Lonely Chrismas</button>
+        <button class="flow_btn">演员</button>
+        <button class="flow_btn">难念的经</button>
+        <button class="flow_btn">剑魂</button>
+        <button class="flow_btn">Merry Lonely Chrismas</button>
+        <button class="flow_btn">演员</button>
+        <button class="flow_btn">难念的经</button>
+        <button class="flow_btn">剑魂</button>
+    </div>
+    <div id="music-order">
+        <ul>
+            <li><img src="../../../static/image/style_music_order.png"/></li>
+            <li><img src="../../../static/image/style_music_order.png"/></li>
+            <li><img src="../../../static/image/style_music_order.png"/></li>
+        </ul>
+        <div id="more_order">更多</div>
+    </div>
+</div>
+
+<!--单曲推荐容器-->
+<div class="content-container">
+    <span class="model_title">单曲推荐</span>
+    <span class="model_right">换一换</span>
+    <div class="music-list">
+        <ul>
+            <li><img src="../../../static/image/style_single_music.png"/></li>
+            <li class="music_li">
+                <img style="width: 70px;height: 70px;margin-top: 11px;" src="../../../static/image/music_tmp1.png">
+                <div style="float: right;width: 370px;height: 93px;line-height: 93px">
+                    <span style="font-size: 13px;width: 320px;">告白气球</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
 <script type="text/javascript">
     $(function () {
         var musicItem1 = $(".music-bg").clone();
         var musicItem2 = $(".music-bg").clone();
+        var musicItem3 = $(".music-bg").clone();
         //模拟添加两个
-        $("#music-container").append(musicItem1);
-        $("#music-container").append(musicItem2);
+        $(".music-album").append(musicItem1);
+        $(".music-album").append(musicItem2);
+        $(".music-album").append(musicItem3);
+        //模拟再添加6个音乐列表
+        for (var index = 0; index < 6; index++) {
+            var musicLi = $(".music_li").eq(0).clone();
+            $(".music-list ul").append(musicLi);
+        }
     });
 </script>
 </body>

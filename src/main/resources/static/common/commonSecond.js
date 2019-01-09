@@ -4,3 +4,6 @@ document.write('<script src="../../../static/_plugin/jquery-ui.js" type="text/ja
 document.write('<link href="../../../static/_plugin/jquery-ui.css" rel="stylesheet" type="text/css">');
 document.write('<link href="../../../static/_plugin/jquery-ui.structure.css" rel="stylesheet" type="text/css">')
 document.write('<link href="../../../static/_plugin/jquery-ui.theme.css" rel="stylesheet" type="text/css">')
+
+// 公共的一些样式
+document.write('<link href="../../../static/css/common/common.css" rel="stylesheet" type="text/css">')

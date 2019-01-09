@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 微软雅黑;
+}
+
+/*内容容器*/
+.content-container {
+    padding: 10px;
+    height: auto;
+    margin-right: 5px;
+    /*自适应宽度，和(display: inline-block;)一起用，但是多个会出现顶部不能对齐的问题，用(vertical-align: top);*/
+    width: auto;
+    vertical-align: top;
+    display: inline-block;
+    background-color: white;
+}
+
+/*内容容器-标题*/
+.content-container .model_title {
+    color: #4E5465;
+    font-size: 16px;
+}
+
+/*内容容器-右侧文字*/
+.content-container .model_right {
+    color: #00CCFF;
+    cursor: pointer;
+    margin-top: 5px;
+    float: right;
+    font-size: 12px;
+}
+
+/*ul li公共样式*/
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
