@@ -1,0 +1,127 @@
+/*WANT容器单独div*/
+#want-container {
+    margin-top: 10px;
+}
+
+/*WANT容器div*/
+.want-container {
+    width: 1085px;
+    height: 363px;
+    margin-top: 10px;
+}
+
+/*左侧搜索div*/
+.want-container .left-search {
+    width: 200px;
+    height: 100%;
+    float: left;
+}
+
+/*图片搜索框*/
+.search-picture input {
+    background-color: #eeeeee;
+    width: 160px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid #e2e2e2;
+}
+
+/*流式按钮集div*/
+#flow-pic-tag {
+    width: 200px;
+    margin-top: 20px;
+}
+
+/*流式按钮*/
+.flow_btn {
+    width: auto;
+    height: 25px;
+    font-size: 12px;
+    margin-bottom: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    color: #C2BE9E;
+    background: transparent;
+    border: 1px solid #C2BE9E;
+}
+
+/*WANT右侧图片布局*/
+.want-container .right-content {
+    width: 885px;
+    height: 100%;
+    float: left;
+    background-color: #C2BE9E;
+}
+
+/*右侧包含六角形的集合*/
+.right-content-sexs {
+    width: 285px;
+    height: 100px;
+    float: left;
+    text-align: center;
+    position: relative;
+    margin-top: 30px;
+}
+
+/*右侧包含网格图片的集合*/
+.right-content-nets {
+    float: left;
+    width: 600px;
+    height: 100%;
+    background-color: #93D1FF;
+}
+
+/*推荐小卡片样式*/
+.pic-grid-item {
+    width: 180px;
+    height: 125px;
+    padding: 5px;
+    float: left;
+    margin-top: 7px;
+    margin-left: 7px;
+    text-align: center;
+    background-color: white;
+}
+
+.pic-grid-item img {
+    width: 180px;
+    height: 100px;
+}
+
+.pic-grid-item span {
+    font-size: 12px;
+    color: #4E5465;
+}
+
+/*友情链接div*/
+.blogroll {
+    float: left;
+    width: 580px;
+    height: 60px;
+    padding: 5px;
+}
+
+/*友情链接提示*/
+.blogroll span {
+    font-size: 12px;
+    color: #4E5465;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/*友情链接文字*/
+.blogroll .flow_btn_link {
+    width: auto;
+    height: 20px;
+    font-size: 12px;
+    margin-left: 2px;
+    margin-right: 2px;
+    color: #C2BE9E;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.blogroll .flow_btn_link a:hover {
+    color: #5FB878;
+}

@@ -1,0 +1,29 @@
+/*个性随意容器单独div*/
+#random-container {
+    margin-top: 10px;
+}
+
+/*随机图片容器div*/
+.random-container {
+    width: 533px;
+    margin-top: 5px;
+}
+
+.random-container .big_pic {
+    height: 210px;
+    margin-top: 2px;
+    width: 400px;
+    float: left;
+}
+
+.random-container .right_pics {
+    margin-left: 5px;
+    margin-top: 2px;
+    float: left;
+}
+
+.random-container .right_pics img {
+    width: 121px;
+    box-sizing: border-box;
+    border: 2px solid #4E5465;
+}

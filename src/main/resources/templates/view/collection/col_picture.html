@@ -5,76 +5,263 @@
     <title>相册</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <script src="../../../static/common/commonSecond.js"></script>
-    <!--3D画廊样式-->
-    <!--<script src="../../../static/common/common3D.js"></script>-->
     <!--轮播图样式-->
     <link rel="stylesheet" href="../../../static/css/col_picture_loop.css">
     <!--相框样式-->
-    <link rel="stylesheet" href="../../../static/css/col_picture.css">
+    <link rel="stylesheet" href="../../../static/css/col_picture_album.css">
+    <!--随机图片样式-->
+    <link rel="stylesheet" href="../../../static/css/col_picture_random.css">
+    <!--六边形布局样式-->
+    <link rel="stylesheet" href="../../../static/css/col_picture_sexangle.css">
+    <!--YOU WANT-->
+    <link rel="stylesheet" href="../../../static/css/col_picture_want.css">
 </head>
 <body>
-<!--轮询自动播放容器-->
-<div class="content-container">
-    <span class="model_title">推荐看看</span>
-    <!--图片容器-->
-    <div class="loop-container">
-        <div class="box">
-            <img src="../../../static/image/pic_test/1.jpg" alt=""/>
-            <img src="../../../static/image/pic_test/2.jpg" alt=""/>
-            <img src="../../../static/image/pic_test/3.jpg" alt=""/>
-            <img src="../../../static/image/pic_test/4.jpg" alt=""/>
-            <img src="../../../static/image/pic_test/5.jpg" alt=""/>
-            <img src="../../../static/image/pic_test/6.jpg" alt=""/>
-            <img src="../../../static/image/pic_test/7.jpg" alt=""/>
+<div class="vertical-container">
+    <!--轮询自动播放容器-->
+    <div class="content-container">
+        <span class="model_title">推荐看看</span>
+        <!--图片容器-->
+        <div class="loop-container">
+            <div class="box">
+                <img src="../../../static/image/pic_test/1.jpg" alt=""/>
+                <img src="../../../static/image/pic_test/2.jpg" alt=""/>
+                <img src="../../../static/image/pic_test/3.jpg" alt=""/>
+                <img src="../../../static/image/pic_test/4.jpg" alt=""/>
+                <img src="../../../static/image/pic_test/5.jpg" alt=""/>
+                <img src="../../../static/image/pic_test/6.jpg" alt=""/>
+                <img src="../../../static/image/pic_test/7.jpg" alt=""/>
+            </div>
+            <div class="circle">
+                <b class="current"></b>
+                <b></b>
+                <b></b>
+                <b></b>
+                <b></b>
+                <b></b>
+                <b></b>
+            </div>
+            <!--<div class="btn left"> &lt;</div>-->
+            <!--<div class="btn right"> &gt;</div>-->
         </div>
-        <div class="circle">
-            <b class="current"></b>
-            <b></b>
-            <b></b>
-            <b></b>
-            <b></b>
-            <b></b>
-            <b></b>
-        </div>
-        <!--<div class="btn left"> &lt;</div>-->
-        <!--<div class="btn right"> &gt;</div>-->
     </div>
-</div>
-<!--轮播图js-->
-<script src="../../../static/js/col_picture_loop.js"></script>
-<!--网格相框容器-->
-<div class="content-container">
-    <span class="model_title">个性相册</span>
-    <div class="album-bg">
-        <div class="album_left">
-            <table border="0px" cellspacing="0">
-                <tr>
-                    <th class="first-pic" colspan="3" rowspan="3"></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </table>
-            <div class="album_title_right">游戏</div>
-        </div>
-        <div class="album_right">
-            <ul>
-                <li>动漫</li>
-                <li>游戏</li>
-                <li>原画</li>
-                <li>景物</li>
-                <li>美女</li>
-            </ul>
+    <!--轮播图js-->
+    <script src="../../../static/js/col_picture_loop.js"></script>
+    <!--个性随意容器-->
+    <div class="content-container" id="random-container">
+        <span class="model_title">个性随意</span>
+        <!--随机图片容器-->
+        <div class="random-container">
+            <div>
+                <img class="big_pic" src="../../../static/image/style_random_pic.png" alt=""/>
+                <div class="right_pics">
+                    <img src="../../../static/image/pic_test/1.jpg" alt=""/><br>
+                    <img src="../../../static/image/pic_test/2.jpg" alt=""/><br>
+                    <img src="../../../static/image/pic_test/3.jpg" alt=""/><br>
+                </div>
+            </div>
+            <div>
+                <img class="big_pic" src="../../../static/image/style_random_pic_nor.png" alt=""/>
+                <div class="right_pics">
+                    <img src="../../../static/image/pic_test/4.jpg" alt=""/><br>
+                    <img src="../../../static/image/pic_test/5.jpg" alt=""/><br>
+                    <img src="../../../static/image/pic_test/6.jpg" alt=""/><br>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+<div class="vertical-container">
+    <!--网格相框容器-->
+    <div class="content-container">
+        <span class="model_title">创意相册</span>
+        <div class="album-bg">
+            <div class="album_left">
+                <table border="0px" cellspacing="0">
+                    <tr>
+                        <th class="first-pic" colspan="3" rowspan="3"></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </table>
+                <div class="album_title_right">游戏</div>
+            </div>
+            <div class="album_right">
+                <ul>
+                    <li>动漫</li>
+                    <li>游戏</li>
+                    <li>原画</li>
+                    <li>景物</li>
+                    <li>美女</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--YOU WANT容器-->
+    <div class="content-container" id="want-container">
+        <span class="model_title">YOU WANT</span>
+        <div class="want-container">
+            <!--左侧搜索快速查询-->
+            <div class="left-search">
+                <div class="search-picture">
+                    <input type="text" placeholder="请输入您想要的图片"/>
+                </div>
+                <div id="flow-pic-tag">
+                    <button class="flow_btn">动漫</button>
+                    <button class="flow_btn">火影忍者</button>
+                    <button class="flow_btn">一人之下</button>
+                    <button class="flow_btn">美女</button>
+                    <button class="flow_btn">明星</button>
+                    <button class="flow_btn">王者荣耀</button>
+                    <button class="flow_btn">非人学院</button>
+                    <button class="flow_btn">天涯明月刀</button>
+                    <button class="flow_btn">二次元</button>
+                    <button class="flow_btn">关于我转生变成史莱姆这件事</button>
+                    <button class="flow_btn">全职高手</button>
+                    <button class="flow_btn">秦时明月</button>
+                    <button class="flow_btn">唯美</button>
+                    <button class="flow_btn">风景</button>
+                    <button class="flow_btn">可爱的熊</button>
+                    <button class="flow_btn">DNF</button>
+                    <button class="flow_btn">...</button>
+                    <button class="flow_btn">蒸汽朋克</button>
+                </div>
+            </div>
+            <!--右侧丰富内容布局-->
+            <div class="right-content">
+                <!--右侧包含六角形的集合-->
+                <div class="right-content-sexs">
+                    <!--第一行(lineFirst)-->
+                    <div class="lineF">
+                        <div class="boxF">
+                            <div class="boxS">
+                                <div class="boxT"
+                                     style="background-image: url(../../../static/image/pic_test/9.jpg);">
+                                    <div class="overlay">
+                                        <a href="#">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxF">
+                            <div class="boxS">
+                                <div class="boxT"
+                                     style="background-image: url(../../../static/image/pic_test/10.jpg);">
+                                    <div class="overlay">
+                                        <a href="#">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--第二行(lineSecond)-->
+                    <div class="lineS">
+                        <div class="boxF">
+                            <div class="boxS">
+                                <div class="boxT"
+                                     style="background-image: url(../../../static/image/pic_test/6.jpg);">
+                                    <div class="overlay">
+                                        <a href="#">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxF">
+                            <div class="boxS">
+                                <div class="boxT"
+                                     style="background-image: url(../../../static/image/pic_test/12.jpg);">
+                                    <div class="overlay">
+                                        <a href="#">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--第三行(lineThird)-->
+                    <div class="lineT">
+                        <div class="boxF">
+                            <div class="boxS">
+                                <div class="boxT"
+                                     style="background-image: url(../../../static/image/pic_test/8.jpg);">
+                                    <div class="overlay">
+                                        <a href="#">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxF">
+                            <div class="boxS">
+                                <div class="boxT"
+                                     style="background-image: url(../../../static/image/pic_test/7.jpg);">
+                                    <div class="overlay">
+                                        <a href="#">+</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--右侧包含网格图片的集合-->
+                <div class="right-content-nets">
+                    <div class="pic-grid-item">
+                        <img src="../../../static/image/pic_test/8.jpg">
+                        <span>最美的不过是你</span>
+                    </div>
+                    <div class="pic-grid-item">
+                        <img src="../../../static/image/pic_test/9.jpg">
+                        <span>我们的青春如梦</span>
+                    </div>
+                    <div class="pic-grid-item">
+                        <img src="../../../static/image/pic_test/10.jpg">
+                        <span>设计之美</span>
+                    </div>
+                    <div class="pic-grid-item">
+                        <img src="../../../static/image/pic_test/11.jpg">
+                        <span>创意的天窗</span>
+                    </div>
+                    <div class="pic-grid-item">
+                        <img src="../../../static/image/pic_test/12.jpg">
+                        <span>互联网科技</span>
+                    </div>
+                    <div class="pic-grid-item">
+                        <img src="../../../static/image/pic_test/7.jpg">
+                        <span>Y Want</span>
+                    </div>
+                    <!--友情链接：-->
+                    <div class="blogroll">
+                        <span>You can click blogroll for beautiful picture and more. blogroll:</span>
+                        <div>
+                            <button class="flow_btn_link"><a href="https://image.baidu.com/">★百度图片</a></button>
+                            <button class="flow_btn_link"><a href="http://huaban.com/">★花瓣</a></button>
+                            <button class="flow_btn_link"><a href="http://www.nipic.com/index.html">★昵图网</a></button>
+                            <button class="flow_btn_link"><a href="https://www.ishsh.com/">★美图网</a></button>
+                            <button class="flow_btn_link"><a href="http://desk.zol.com.cn/">★ZOL桌面壁纸</a></button>
+                            <button class="flow_btn_link"><a href="http://www.chahua.org/">★插画中国</a></button>
+                            <button class="flow_btn_link"><a href="http://www.umei.cc">★优美图片网</a></button>
+                            <button class="flow_btn_link"><a href="http://photophoto.cn/">★图行天下</a></button>
+                            <button class="flow_btn_link"><a href="http://www.mmonly.cc/">★唯一图库</a></button>
+                            <button class="flow_btn_link"><a href="https://www.5442.com/">★壁纸之家</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
 <script type="text/javascript">
     $(function () {
         // 相框默认第一张高亮
