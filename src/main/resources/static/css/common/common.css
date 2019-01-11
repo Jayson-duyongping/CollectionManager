@@ -7,7 +7,7 @@ body {
 
 /*竖形div-可包容多个.content-container*/
 .vertical-container {
-    width: 533px; /*这个宽度实际会根据内容而变化的，实测*/
+    width: 533px; /*这个宽度要根据具体来设置覆盖*/
     height: auto;
     display: inline-block;
     margin-right: 25px;

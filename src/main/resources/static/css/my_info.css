@@ -11,13 +11,6 @@ body {
     padding-bottom: 15px;
 }
 
-.layui-card {
-    width: 250px;
-    height: auto;
-    background-color: #C2BE9E;
-    margin-right: 10px;
-}
-
 /*左侧*/
 #card_left {
     background-color: white;
@@ -36,7 +29,8 @@ body {
 
 #card_left .edit_right {
     position: absolute;
-    right: 10px;
+    right: 0px;
+    top: -5px;
 }
 
 #card_left #my_name {
@@ -52,11 +46,12 @@ body {
 }
 
 /*头像*/
-.layui-circle {
+.pic-circle {
     width: 100px;
     height: 100px;
     border: #E6E6E6 2px solid;
     margin: 10px 45px;
+    border-radius: 100px;
 }
 
 #head_upload {
@@ -92,6 +87,10 @@ body {
     margin-top: 15px;
     margin-bottom: 15px;
     font-weight: bold;
+    line-height: 22px;
+    margin-left: 0px;
+    border-left: 5px solid #009688;
+    border-radius: 0 2px 2px 0;
 }
 
 .my_about_info {
@@ -108,7 +107,8 @@ body {
 .description {
     text-align: left;
     text-indent: 2em;
-    margin: 0 10px;
+    margin-left: 10px;
+    margin-right: 0px;
     font-size: 12px;
     color: #758697;
 }
@@ -119,22 +119,90 @@ body {
     text-align: left;
     margin-left: 10px;
     margin-bottom: 10px;
-    height: 30px;
-    line-height: 30px;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #C9C9C9;
+    background-color: #fff;
+    color: #555
 }
 
+/*中间动态相关*/
 .my_info_dongtai {
     width: 1000px;
     background-color: white;
 }
 
-.my_info_beiwang {
-    float: left;
+/*动态标题相关*/
+.my_info_dongtai .dongtai_title {
+    height: 80px;
+    vertical-align: center;
+    position: relative
 }
 
-.my_info_beiwang .layui-card {
+.my_info_dongtai .dongtai_title img {
+    width: 60px;
+    height: 60px;
+    border: 0px;
+    margin-left: 0px
+}
+
+.my_info_dongtai .dongtai_title div {
+    position: absolute;
+    top: 40%;
+    left: 70px
+}
+
+/*动态内容相关*/
+
+/*备忘(计划)相关*/
+.my_info_beiwang {
+    height: auto;
+    margin-left: 0px;
+    margin-right: 5px;
+    /*自适应宽度，和(display: inline-block;)一起用，但是多个会出现顶部不能对齐的问题，用(vertical-align: top);*/
+    width: auto;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.my_info_beiwang .plan_btn {
+    margin-bottom: 10px;
     width: 300px;
+    height: 30px;
+    background-color: #5FB878;
+    border: 1px solid blue;
+    color: white
+}
+
+.my_info_beiwang .plan-card {
+    width: 300px;
+    height: 130px;
+    margin-bottom: 20px;
     background-color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     box-shadow: darkgrey 5px 8px 10px 5px;
     /*background-color: rgba(95,184,120,0.4);*/
+}
+
+.my_info_beiwang .plan-card .plan-time {
+    width: 300px;
+    height: 40px;
+    text-align: left;
+    text-indent: 0.5em;
+    border-bottom: 1px solid #00CCFF;
+    line-height: 40px;
+}
+
+.my_info_beiwang .plan-card .plan-content {
+    color: #2E2D3C;
+    width: 280px;
+    line-height: 20px;
+    height: 79px;
+    padding: 10px;
+    color: white;
+    background-color: #4E5465;
+    font-size: 14px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }

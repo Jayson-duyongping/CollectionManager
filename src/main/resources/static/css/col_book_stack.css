@@ -1,0 +1,22 @@
+/*折角效果*/
+.angle {
+    width: 100px;
+    height: 100px;
+    background: -webkit-linear-gradient(top left, transparent 15%, #345070 0);
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #92B8B1;
+
+}
+
+.angle:after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: -webkit-linear-gradient(top left, transparent 50%, #2E2D3C 0);
+    top: -1px;
+    left: -1px;
+    border-bottom-left-radius: 2px;
+    box-shadow: 1px 1px 2px #92B8B1;
+}

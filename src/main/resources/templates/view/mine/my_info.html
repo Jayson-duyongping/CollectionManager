@@ -4,173 +4,129 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" href="../../../static/_layui/css/layui.css">
+
+    <script src="../../../static/common/commonSecond.js"></script>
     <link rel="stylesheet" href="../../../static/css/my_info.css">
-    <script src="../../../static/_plugin/jquery.min.js"></script>
-    <script src="../../../static/_layui/layui.js"></script>
 </head>
 <body>
 <!--左侧个人信息栏-->
-<div class="layui-card" id="card_left">
-    <!--左侧右边编辑保存按钮-->
-    <div class="edit_right" id="edit_info">
-        <a href="javascript:;" onclick="myinfoEdit()">
-            <i class="layui-icon layui-icon-edit" style="font-size: 14px; color: #C2BE9E;"></i>
-            <span style="font-size: 12px;color: #C2BE9E">编辑</span>
-        </a>
-    </div>
-    <div class="edit_right" id="save_info" hidden="true">
-        <a href="javascript:;" onclick="myinfoSave()">
-            <i class="layui-icon layui-icon-ok-circle" style="font-size: 14px; color: #C2BE9E;"></i>
-            <span style="font-size: 12px;color: #C2BE9E">保存</span>
-        </a>
-    </div>
-    <!--头像及名称信息-->
-    <img src="../../../static/image/head_icon.png" class="layui-circle">
-    <div>
-        <button type="button" id="head_upload" hidden="true" style="margin-bottom: 10px;font-size: 12px;">
-            <a href="javascript:;"><i class="layui-icon">&#xe67c;</i>上传图片</a>
-        </button>
-    </div>
-    <input id="my_name" name="nickname" value="JAYSON" readonly="true"/>
-    <input id="my_desc" name="description" value="一个苦逼的程序员" readonly="true"/>
-    <!--联系-->
-    <div class="contact_info">
-        <i class="layui-icon layui-icon-cellphone" style="font-size: 18px; color: #1E9FFF;"></i>
-        <i class="layui-icon layui-icon-login-weibo" style="font-size: 18px; color: #1E9FFF;"></i>
-        <i class="layui-icon layui-icon-login-qq" style="font-size: 18px; color: #1E9FFF;"></i>
-        <i class="layui-icon layui-icon-login-wechat" style="font-size: 18px; color: #1E9FFF;"></i>
-    </div>
-    <div class="contact_info">
-        <input class="contact_text" name="phone" value="13568826084" readonly="true"/>
-        <input class="contact_text" name="sina" value="duyongping@163.com" readonly="true"/>
-        <input class="contact_text" name="qq" value="786022775" readonly="true"/>
-        <input class="contact_text" name="wx" value="fengchensha" readonly="true"/>
-    </div>
-    <blockquote class="layui-elem-quote my_about">
-        关于我
-    </blockquote>
-    <div class="my_about_info">
-        <div id="address">
-            <i class="layui-icon layui-icon-location" style="font-size: 16px;"></i>
-            SC.成都
+<div class="content-container">
+    <div id="card_left">
+        <!--左侧右边编辑保存按钮-->
+        <div class="edit_right" id="edit_info">
+            <a href="javascript:;" onclick="myinfoEdit()">
+                <span style="font-size: 12px;color: #C2BE9E">编辑</span>
+            </a>
         </div>
-        <div class="description">胡歌喜欢摄影，也喜欢写字，他视角独特，充满着奇思妙想。他有着极丰富的情感，和对生活的热情，
-            他能点燃观众心中爱的火焰；胡歌积极、乐观、坚强，他脚踏实地地做好每一件事，真诚地对待身边每一个人。
+        <div class="edit_right" id="save_info" hidden="true">
+            <a href="javascript:;" onclick="myinfoSave()">
+                <span style="font-size: 12px;color: #C2BE9E">保存</span>
+            </a>
         </div>
-    </div>
-    <blockquote class="layui-elem-quote my_about">
-        兴趣
-    </blockquote>
-    <div class="my_about_info">
-        <button class="layui-btn layui-btn-primary">音乐</button>
-        <button class="layui-btn layui-btn-primary">画画</button>
-        <button class="layui-btn layui-btn-primary">动漫</button>
-        <button class="layui-btn layui-btn-primary">计算机</button>
-        <button class="layui-btn layui-btn-primary">王者荣耀</button>
-    </div>
-    <blockquote class="layui-elem-quote my_about">
-        技能
-    </blockquote>
-    <div class="my_about_info" style="margin-bottom: 20px">
-        <button class="layui-btn layui-btn-sm layui-btn-warm">Android</button>
-        <button class="layui-btn layui-btn-normal">Java</button>
-        <button class="layui-btn layui-btn-sm layui-btn-danger">Web前端</button>
-        <button class="layui-btn layui-btn-normal">原画</button>
-        <button class="layui-btn layui-btn-sm layui-btn-danger">英语</button>
-    </div>
-</div>
-<!--中间动态烂-->
-<div class="card_group">
-    <div class="layui-card my_info_dongtai">
-        <div class="layui-card-header" style="height: auto;">
-            <img src="../../../static/image/head_icon.png" class="layui-circle"
-                 style="width: 60px;height: 60px;border: 0px;margin-left: 0px">
-            <span style="margin-left: -35px;color: #2b425b;font-size: 16px">Jayson</span>
-            为<span style="color: #1E9FFF;font-size: 14px"> 图片 </span>添加了新的图片
+        <!--头像及名称信息-->
+        <img class="pic-circle" src="../../../static/image/head_icon.png"/>
+        <div>
+            <button type="button" id="head_upload" hidden="true" style="margin-bottom: 10px;font-size: 12px;">
+                <a href="javascript:;">上传图片</a>
+            </button>
         </div>
-        <div class="layui-card-body">
-            <div class="description" style="text-indent:0em;margin-left: 0px">
-                这是一只可爱的狐狸
+        <input id="my_name" name="nickname" value="JAYSON" readonly="true"/>
+        <input id="my_desc" name="description" value="一个苦逼的程序员" readonly="true"/>
+        <!--联系-->
+        <div class="contact_info">
+            <input class="contact_text" name="phone" value="13568826084" readonly="true"/>
+            <input class="contact_text" name="sina" value="duyongping@163.com" readonly="true"/>
+            <input class="contact_text" name="qq" value="786022775" readonly="true"/>
+            <input class="contact_text" name="wx" value="fengchensha" readonly="true"/>
+        </div>
+        <blockquote class="my_about">
+            关于我
+        </blockquote>
+        <div class="my_about_info">
+            <div id="address">
+                SC.成都
             </div>
-            <img src="../../../static/image/草原上的狐狸20181003204331.jpg" style="max-width: 970px;margin-top: 10px">
-        </div>
-    </div>
-    <div class="layui-card my_info_dongtai">
-        <div class="layui-card-header" style="height: auto;">
-            <img src="../../../static/image/head_icon.png" class="layui-circle"
-                 style="width: 60px;height: 60px;border: 0px;margin-left: 0px">
-            <span style="margin-left: -35px;color: #2b425b;font-size: 16px">Jayson</span>
-            为<span style="color: #1E9FFF;font-size: 14px"> 文章 </span>添加了新的文章
-        </div>
-        <div class="layui-card-body">
             <div class="description">胡歌喜欢摄影，也喜欢写字，他视角独特，充满着奇思妙想。他有着极丰富的情感，和对生活的热情，
                 他能点燃观众心中爱的火焰；胡歌积极、乐观、坚强，他脚踏实地地做好每一件事，真诚地对待身边每一个人。
             </div>
         </div>
+        <blockquote class="my_about">
+            兴趣
+        </blockquote>
+        <div class="my_about_info">
+            <button>音乐</button>
+            <button>画画</button>
+            <button>动漫</button>
+            <button>计算机</button>
+            <button>王者荣耀</button>
+        </div>
+        <blockquote class="my_about">
+            技能
+        </blockquote>
+        <div class="my_about_info" style="margin-bottom: 20px">
+            <button>Android</button>
+            <button>Java</button>
+            <button>Web前端</button>
+            <button>原画</button>
+            <button>英语</button>
+        </div>
     </div>
 </div>
+<!--中间动态烂-->
+<div class="content-container">
+    <div class="card_group">
+        <div class="my_info_dongtai">
+            <div class="dongtai_title">
+                <img src="../../../static/image/head_icon.png" class="pic-circle">
+                <div>
+                    <span style="color: #2b425b;font-size: 16px;">Jayson</span>
+                    为<span style="color: #1E9FFF;font-size: 14px;"> 图片 </span>添加了新的图片
+                </div>
+            </div>
+            <div class="dongtai_content">
+                <div class="description" style="text-indent:0em;margin-left: 0px">
+                    这是一只可爱的狐狸
+                </div>
+                <img src="../../../static/image/草原上的狐狸20181003204331.jpg" style="max-width: 1000px;margin-top: 10px">
+            </div>
+        </div>
+        <div class="my_info_dongtai">
+            <div class="dongtai_title">
+                <img src="../../../static/image/head_icon.png" class="pic-circle">
+                <div>
+                    <span style="color: #2b425b;font-size: 16px;">Jayson</span>
+                    为<span style="color: #1E9FFF;font-size: 14px;"> 文章 </span>添加了新的文章
+                </div>
+            </div>
+            <div class="dongtai_content">
+                <div class="description" style="margin-left: 0px">胡歌喜欢摄影，也喜欢写字，他视角独特，充满着奇思妙想。他有着极丰富的情感，和对生活的热情，
+                    他能点燃观众心中爱的火焰；胡歌积极、乐观、坚强，他脚踏实地地做好每一件事，真诚地对待身边每一个人。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!--右侧备忘计划栏-->
 <div class="my_info_beiwang">
-    <button class="layui-btn  layui-btn-warm" style="margin-bottom: 10px;width: 300px">5天计划表</button>
-    <div class="layui-card">
-        <div class="layui-card-header">2018-10-22</div>
-        <div class="layui-card-body">
-            1.完成XX项目X模块<br>
-            2.学习完成前端X知识点
-        </div>
-    </div>
-    <div class="layui-card">
-        <div class="layui-card-header">2018-10-23</div>
-        <div class="layui-card-body">
-            1.完成XX项目X模块<br>
-            2.学习完成前端X知识点
-        </div>
-    </div>
-    <div class="layui-card">
-        <div class="layui-card-header">2018-10-24</div>
-        <div class="layui-card-body">
-            1.完成XX项目X模块<br>
-            2.学习完成前端X知识点
-        </div>
-    </div>
-    <div class="layui-card">
-        <div class="layui-card-header">2018-10-25</div>
-        <div class="layui-card-body">
-            1.完成XX项目X模块<br>
-            2.学习完成前端X知识点
-        </div>
-    </div>
-    <div class="layui-card">
-        <div class="layui-card-header">2018-10-26</div>
-        <div class="layui-card-body">
+    <button class="plan_btn">5天计划表</button>
+    <div class="plan-card">
+        <div class="plan-time">2018-10-22</div>
+        <div class="plan-content">
             1.完成XX项目X模块<br>
             2.学习完成前端X知识点
         </div>
     </div>
 </div>
 <script>
-    //JavaScript代码区域
-    layui.use(['element', 'upload'], function () {
-        var element = layui.element;
-        var upload = layui.upload;
-        //执行实例
-        var uploadInst = upload.render({
-            elem: '#head_upload' //绑定元素
-            , url: '/upload/' //上传接口
-            , done: function (res) {
-                //上传完毕回调
-            }
-            , error: function () {
-                //请求异常回调
-            }
-        });
-    });
-</script>
-<script>
-    $(document).ready(function () {
+    $(function () {
         // $("#head_upload").hide();
         // $("#save_info").hide();
+        // 模拟新加卡片信息
+        for (var index = 0; index < 4; index++) {
+            var planCardItem = $(".plan-card").first().clone(true);
+            $(".my_info_beiwang").append(planCardItem);
+        }
     });
 
     /**

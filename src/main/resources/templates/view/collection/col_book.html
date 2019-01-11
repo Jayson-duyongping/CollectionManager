@@ -5,23 +5,111 @@
     <title>书籍</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <script src="../../../static/common/commonSecond.js"></script>
+    <!--书籍样式-->
     <link rel="stylesheet" href="../../../static/css/col_book.css">
-    <script src="../../../static/js/col_book.js"></script>
+    <!--叠层样式-->
+    <link rel="stylesheet" href="../../../static/css/col_book_stack.css">
 </head>
 <body>
-<table cellspacing="0">
-    <thead>
-    <tr>
-        <th>编号</th>
-        <th>游戏名字</th>
-        <th>游戏包名</th>
-        <th>游戏图片</th>
-    </tr>
-    </thead>
-    <tbody id="mode">
+<!--书籍导航栏-->
+<div class="book-menu">
+    <ul>
+        <li>IT</li>
+        <li>艺术</li>
+        <li>文学</li>
+        <li>小说</li>
+        <li>漫画</li>
+    </ul>
+</div>
+<!--书籍分类-->
+<div class="book-menu">
+</div>
+<!--推荐书籍区-->
+<div class="content-container">
+    <span class="model_title">推荐书籍</span>
+    <div class="book-bg">
+        <ul id="book-line">
+            <li class="line-li">
+                <ul class="second-ul">
+                    <li>
+                        <div class="book-f">
+                            <div class="book-name">IT技术andorid技术Java技术</div>
+                            <div class="book-format">--PDF--</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="book-f book-margin">
+                            <div class="book-name">程序员修炼之道</div>
+                            <div class="book-format">--PDF--</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="book-f book-margin">
+                            <div class="book-name">Java</div>
+                            <div class="book-format">--PDF--</div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="book-tip">
+                    IT书籍
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
 
-    </tbody>
-</table>
+<!--畅读-->
+<div class="vertical-container" id="vertical-container1">
+    <div class="content-container">
+        <span class="model_title">上次阅读</span>
+        <div class="last-look-bg">
+            <div class="last-look-book">
+                <div class="angle"></div>
+                <span>PS入门到精通</span>
+            </div>
+            <div class="last-look-book">
+                <div class="angle"></div>
+                <span>掌握Java</span>
+            </div>
+            <div class="last-look-book">
+                <div class="angle"></div>
+                <span>超级记忆法</span>
+            </div>
+            <div class="last-look-book">
+                <div class="angle"></div>
+                <span>前端Web技术</span>
+            </div>
+        </div>
+    </div>
+    <div class="content-container" style="margin-top: 10px">
+        <span class="model_title">畅读天地</span>
+        <div style="margin-top: 8px;width: 716px">
+            <img src="../../../static/image/style_book_tmp1.png"/>
+        </div>
+    </div>
+</div>
 
+<!--新书-->
+<div class="content-container">
+    <div style="margin-top: 8px">
+        <img src="../../../static/image/style_book_tmp2.png"/>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        // 模拟新加一行推荐书籍
+        var bookLineItem1 = $(".line-li").first().clone(true);
+        // 修改子元素的样式和内容
+        bookLineItem1.children(".book-tip").text("艺术").css("border-bottom", "50px solid #2b425b");
+        // 模拟新加一行推荐书籍
+        var bookLineItem2 = $(".line-li").first().clone(true);
+        // 修改子元素的样式和内容
+        bookLineItem2.children(".book-tip").text("文学").css("border-bottom", "50px solid #1E9FFF");
+        // 追加
+        $("#book-line").append(bookLineItem1);
+        $("#book-line").append(bookLineItem2);
+    });
+</script>
 </body>
 </html>

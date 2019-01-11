@@ -1,44 +1,161 @@
-table {
-    width: auto;
+/*修改.vertical-container样式宽度*/
+#vertical-container1 {
+    width: 718px;
+}
+
+/*书籍菜单导航*/
+.book-menu {
+    margin-bottom: 10px;
+}
+
+.book-menu li {
+    list-style: none;
+    float: left;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 10px;
+    position: relative;
+    width: 50px;
     text-align: center;
-    border-left: 1px solid #ccc;
-    border-top: 1px solid #ccc;
+    color: white;
 }
 
-table th, td {
-    height: 30px;
-    line-height: 30px;
-    border-right: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
+.book-menu::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
 }
 
-table tr th {
-    background-color: #1E9FFF;
+.book-menu ul::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
 }
 
-table tr td {
-    padding-left: 20px;
-    padding-right: 20px;
+.book-menu li::after {
+    border-radius: 3px;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -1;
+    background-color: #09818D;
+    -moz-transform: skewX(-25deg);
+    -ms-transform: skewX(-25deg);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
 }
 
-#pageStyle {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    border: 1px solid #CCC;
-    line-height: 32px;
+.book-menu li:hover::after {
+    background-color: #58CAD0;
+}
+
+/*书架的布局*/
+.book-bg ul {
+    list-style: none;
+}
+
+.book-bg #book-line > li {
+    /*background-color: #5f3f3f;*/
+    height: 200px;
+    width: 500px;
+    margin-top: 10px;
+    position: relative;
+    border: 1px solid #dad55e;
+    box-shadow: 5px 5px 5px #888888;
+}
+
+.book-bg .second-ul > li {
+    display: inline;
+    float: left;
+    margin-top: 0px;
+}
+
+/*书本的布局*/
+.book-bg .second-ul > li .book-f {
+    height: 200px;
+    width: 140px;
+    position: relative;
     text-align: center;
-    color: #999;
+    /*background: url("../../../static/image/book_f.png") no-repeat;*/
+    /*background-size: 100% 100%;*/
+    background-color: #eeeeee;
+    border: 4px solid white;
+    box-sizing: border-box;
+}
+
+/*后两本书需要单独设置向左的间距*/
+.book-margin {
+    margin-left: 40px;
+}
+
+.book-f .book-name {
+    color: #2b425b;
+    height: 170px;
+    width: 140px;
+    padding: 10px;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.book-f .book-format {
+    color: #2b425b;
+    left: 35%;
+    position: absolute;
+    color: #aaaaaa;
+    font-size: 10px;
+    bottom: 10px;
+}
+
+/*左上角的标签*/
+#book-line .book-tip {
+    position: absolute;
+    border-bottom: 50px solid #FF5722;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    height: 0;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    -webkit-transform: rotate(315deg);
+    -moz-transform: rotate(315deg);
+    -ms-transform: rotate(315deg);
+    -o-transform: rotate(315deg);
+    top: 10px;
+    left: -40px;
+}
+
+/*上次阅读背景*/
+.last-look-bg {
+    width: 716px;
+    height: 200px;
+    margin-top: 10px;
+    border: 10px solid #BF5A08;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.last-look-book {
+    margin-top: 30px;
+    margin-left: 15px;
+    float: left;
+    width: 100px;
+    height: 150px;
+    text-align: center;
+}
+
+.last-look-book span {
     margin-top: 20px;
-    text-decoration: none;
-
-}
-
-#pageStyle:hover {
-    background-color: #CCC;
-}
-
-#pageStyle .active {
-    background-color: #0CF;
-    color: #ffffff;
+    font-size: 12px;
+    /*文字超出隐藏*/
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
