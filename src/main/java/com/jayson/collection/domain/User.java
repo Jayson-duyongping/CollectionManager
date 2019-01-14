@@ -1,5 +1,8 @@
 package com.jayson.collection.domain;
 
+/**
+ * 用户实体
+ */
 public class User {
     private Integer id;
 

@@ -6,7 +6,7 @@ public class WrapResListEntity {
     private int code;
     private String msg;
     private int count;
-    private List<Object> list;
+    private List<?> list;
 
     public int getCode() {
         return code;
@@ -32,11 +32,11 @@ public class WrapResListEntity {
         this.count = count;
     }
 
-    public List<Object> getList() {
+    public List<?> getList() {
         return list;
     }
 
-    public void setList(List<Object> list) {
+    public void setList(List<?> list) {
         this.list = list;
     }
 }
